@@ -1,44 +1,44 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.untitledfinancial/dpx",
-  "title": "DPX — Institutional Cross-Border Settlement",
-  "description": "DPX cross-border settlement rail — institutional USD/EUR settlement at ~30bps via Base mainnet. 11 tools: quote, ESG scoring, oracle status, fee verification, competitor benchmarking, on-chain settlement. ESG-linked fees, MiCA/FCA/Basel III-aligned.",
-  "repository": {
-    "url": "https://github.com/untitledfinancial/dpx-mcp",
-    "source": "github"
-  },
-  "version_detail": {
-    "version": "2.1.0"
-  },
-  "remotes": [
-    {
-      "transport_type": "http",
-      "url": "https://mcp.untitledfinancial.com/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registry_name": "npm",
-      "name": "@untitledfinancial/dpx-mcp",
-      "version": "2.1.0",
-      "package_arguments": [],
-      "environment_variables": [
-        {
-          "name": "STABILITY_ORACLE_URL",
-          "description": "Override the Stability Oracle URL",
-          "required": false
-        },
-        {
-          "name": "SETTLEMENT_AGENT_URL",
-          "description": "Override the Settlement Agent URL",
-          "required": false
-        },
-        {
-          "name": "SANDBOX_MODE",
-          "description": "Set to false for live on-chain settlement (default: true)",
-          "required": false
-        }
-      ]
-    }
-  ]
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.untitledfinancial/dpx",
+    "title": "DPX — Institutional Cross-Border Settlement",
+    "description": "DPX cross-border settlement rail — institutional settlement at ~30bps via Base mainnet, any currency pair. 11 tools covering the full lifecycle: quote, ESG scoring, oracle status, fee verification, competitor benchmarking, and on-chain settlement execution. ESG-linked fees, on-chain verifiable receipts, MiCA/FCA/Basel III-aligned.",
+    "repository": {
+          "url": "https://github.com/untitledfinancial/dpx-mcp",
+          "source": "github"
+    },
+    "version_detail": {
+          "version": "2.2.0"
+    },
+    "remotes": [
+          {
+                  "transport_type": "http",
+                  "url": "https://mcp.untitledfinancial.com/mcp"
+          }
+    ],
+    "packages": [
+          {
+                  "registry_name": "npm",
+                  "name": "@untitledfinancial/dpx-mcp",
+                  "version": "2.2.0",
+                  "package_arguments": [],
+                  "environment_variables": [
+                            {
+                                        "name": "STABILITY_ORACLE_URL",
+                                        "description": "Override the Stability Oracle URL (default: https://stability.untitledfinancial.com)",
+                                        "required": false
+                            },
+                            {
+                                        "name": "SETTLEMENT_AGENT_URL",
+                                        "description": "Override the Settlement Agent URL (default: https://agent.untitledfinancial.com)",
+                                        "required": false
+                            },
+                            {
+                                        "name": "SANDBOX_MODE",
+                                        "description": "Set to false for live on-chain settlement (default: true)",
+                                        "required": false
+                            }
+                  ]
+          }
+    ]
 }
